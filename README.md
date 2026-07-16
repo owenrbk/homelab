@@ -7,8 +7,7 @@ Architectural Overview
 
 A three-node Proxmox-based environment segmenting core compute, network infrastructure, and dedicated backup, operating on a 10.0.1.0/24 internal LAN nested behind a primary 192.168.1.0/24 gateway.
 
-**
-Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
+**Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
 - Role: Heavy Lifting & Media.
 - Key Specs: i5-6500T, 16GB DDR4, 1TB NVMe, MediaSonic 4-Bay 2TB DAS.
 - Critical Services:

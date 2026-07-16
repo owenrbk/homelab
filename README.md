@@ -11,8 +11,8 @@ A three-node Proxmox-based environment segmenting core compute, network infrastr
 - Role: Heavy Lifting & Media.
 - Key Specs: i5-6500T, 16GB DDR4, 1TB NVMe, MediaSonic 4-Bay 2TB DAS.
 - Critical Services:
-  - Immich: 750gb vdisk on SSD to store gallery, 1tb HDD rsync backup
-  - Samba/NFS shares: on 500gb HDD with 500gb HDD rsync backup
+  - Immich: 750gb vdisk on SSD to store gallery, 1TB HDD rsync backup
+  - Samba/NFS shares: On 500GB HDD with secondary 500GB HDD rsync backup
   - Game Hosting: Minecraft Server managed with Crafty Controller and hosted via playit.gg
 
 **Infrastructure Node: M93p (Lenovo ThinkCentre Tiny)**

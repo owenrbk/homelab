@@ -1,9 +1,5 @@
-# Homelab
-Summary: 
-- A 3-node Proxmox homelab on a 10.0.1.0/24 LAN. The M900 handles compute, storage, and Minecraft hosting. The M93p serves as the network router (OPNsense), firewall, and DNS. The Intel NUC manages critical infrastructure, including backups, system monitoring, and UPS power management. All nodes are securely accessible via WireGuard.
-
-Homelab System Manifest (v1.0)
-Architectural Overview
+# Homelab System Manifest (v1.0)
+## Architectural Overview
 
 A three-node Proxmox-based environment segmenting core compute, network infrastructure, and dedicated backup, operating on a 10.0.1.0/24 internal LAN nested behind a primary 192.168.1.0/24 gateway.
 
@@ -41,4 +37,4 @@ Future Possible Projects
   NUC: Home Assistant
 
 
-!(Network Diagram)[images/homelab-diagram.png]
+![Network Diagram](images/homelab-diagram.png)

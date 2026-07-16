@@ -1,9 +1,9 @@
 # Homelab System Manifest (v1.0)
-## Architectural Overview
 
+**Architectural Overview**
 A three-node Proxmox-based environment segmenting core compute, network infrastructure, and dedicated backup, operating on a 10.0.1.0/24 internal LAN nested behind a primary 192.168.1.0/24 gateway.
 
-# **Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
+## **Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
 - Role: Heavy Lifting & Media.
 - Key Specs: i5-6500T, 16GB DDR4, 1TB NVMe, MediaSonic 4-Bay 2TB DAS.
 - Critical Services:
@@ -11,14 +11,14 @@ A three-node Proxmox-based environment segmenting core compute, network infrastr
   - Samba/NFS shares: On 500GB HDD with secondary 500GB HDD rsync backup
   - Game Hosting: Minecraft Server managed with Crafty Controller and hosted via playit.gg
 
-# **Infrastructure Node: M93p (Lenovo ThinkCentre Tiny)**
+## **Infrastructure Node: M93p (Lenovo ThinkCentre Tiny)**
 - Role: Network Router/DNS/Firewall
 - Key Specs: i5-4570T, 8GB DDR3, 128GB SATA, Intel NIC (Router on a stick)
 - Critical Services:
   - Networking: OPNsense VM (acting as the 10.0.1.1 gateway) and WireGuard VPN (remote access) with Unbound.
   - DNS: Pi-hole works with Unbound for recursive, filtered DNS.
 
-# **Backup Node: NUC (Intel DC3217IYE)**
+## **Backup Node: NUC (Intel DC3217IYE)**
 - Role: Server Backup and Monitoring Tools.
 - Key Specs: i3-3217U, 6GB DDR3, 120GB mSATA, 320GB DAS.
 - Critical Services:

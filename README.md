@@ -3,7 +3,7 @@
 
 A three-node Proxmox-based environment segmenting core compute, network infrastructure, and dedicated backup, operating on a 10.0.1.0/24 internal LAN nested behind a primary 192.168.1.0/24 gateway.
 
-**Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
+# **Primary Compute Node: M900 (Lenovo ThinkCentre Tiny)**
 - Role: Heavy Lifting & Media.
 - Key Specs: i5-6500T, 16GB DDR4, 1TB NVMe, MediaSonic 4-Bay 2TB DAS.
 - Critical Services:
@@ -11,14 +11,14 @@ A three-node Proxmox-based environment segmenting core compute, network infrastr
   - Samba/NFS shares: On 500GB HDD with secondary 500GB HDD rsync backup
   - Game Hosting: Minecraft Server managed with Crafty Controller and hosted via playit.gg
 
-**Infrastructure Node: M93p (Lenovo ThinkCentre Tiny)**
+# **Infrastructure Node: M93p (Lenovo ThinkCentre Tiny)**
 - Role: Network Router/DNS/Firewall
 - Key Specs: i5-4570T, 8GB DDR3, 128GB SATA, Intel NIC (Router on a stick)
 - Critical Services:
   - Networking: OPNsense VM (acting as the 10.0.1.1 gateway) and WireGuard VPN (remote access) with Unbound.
   - DNS: Pi-hole works with Unbound for recursive, filtered DNS.
 
-**Backup Node: NUC (Intel DC3217IYE)**
+# **Backup Node: NUC (Intel DC3217IYE)**
 - Role: Server Backup and Monitoring Tools.
 - Key Specs: i3-3217U, 6GB DDR3, 120GB mSATA, 320GB DAS.
 - Critical Services:
@@ -27,11 +27,12 @@ A three-node Proxmox-based environment segmenting core compute, network infrastr
   - Monitoring: Prometheus, Grafana, and Uptime Kuma monitoring.
   - Power: Centralized NUT (Network UPS Tools) server managing an APC BE600M1.
 
-Network Logic & Security
-Double NAT Management: OPNsense WAN has "Block private networks" disabled to permit traffic from the 192.168.1.0/24 upstream subnet.
-Remote Access: Secured via WireGuard; direct local access to GUIs permitted on Port 443 for the home network.
+### Network Logic & Security
+- Double NAT Management: OPNsense WAN has "Block private networks" disabled to permit traffic from the 192.168.1.0/24 upstream subnet.
+- Router on a Stick: Switch is divided into LAN (VLAN 2) and WAN (VLAN 3); M93p acts as trunk port with tagged traffic for OPNsense (2 & 3) and the proxmox host and other VMs (2).
+- Remote Access: Secured via WireGuard; direct local access to GUIs permitted on Port 443 for the home network.
 
-Future Possible Projects
+### Future Possible Projects
   M900: Media Stack: Jellyfin (Quick Sync passthrough), Arr Stack, and qBittorrent.
   M93p: NGINX Proxy Manager, CrowdSec, Network Status Bots
   NUC: Home Assistant

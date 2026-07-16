@@ -41,4 +41,5 @@ Future Possible Projects
   NUC: Home Assistant
 
 
-![Network Diagram](images/homelab-diagram.png)
+Network Diagram:
+https://app.diagrams.net/#G1EvqcAb8YjPQvRCyxixAoZEQX_ixGAy3K#%7B%22pageId%22%3A%226iZDAG_EsUaFN7Qdr4Fv%22%7D

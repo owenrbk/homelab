@@ -38,4 +38,5 @@ A three-node Proxmox-based environment segmenting core compute, network infrastr
   NUC: Home Assistant
 
 
+## Network Diagram
 ![Network Diagram](images/homelab-diagram.png)
